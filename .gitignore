@@ -4,3 +4,21 @@ bower_components/
 
 build/
 dist/
+.tmp
+
+# PrePros config file
+prepros.cfg
+
+# Sublime Project Files
+*.sublime-*
+
+# Generated files
+app/*.css
+*.css
+
+#backups & tests
+backups/
+test/
+
+app/*.html
+app/partials/*/*.html
