@@ -5,6 +5,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 // $dark-main-color: $gray-light;
 // $light-main-color: $brand-success;
 $dark-main-color: MediumSeaGreen ;
+// $light-main-color: LightGray;
 $light-main-color: SlateGray;
 
 body {
@@ -21,10 +22,13 @@ body {
   @extend .col-md-4;
   @extend .clearfix;
 
+  // * {
+  //   color: dimGrey;
+  // }
   background: $dark-main-color;
   height: 100%;
   position: fixed;
-  padding: 20px;
+  padding: 10px;
 
   @media screen and (max-width: 991px) {
       position: relative;
@@ -52,7 +56,7 @@ body {
   }      
 
   h1 {
-    color: $gray-lighter;
+    // color: $gray-lighter;
     text-align: center;
   }
 
@@ -73,7 +77,7 @@ body {
   margin: 10px;
   padding: 10px;
   text-align: right;
-  background: $gray-light;
+  background: $light-main-color;
   border-radius: 25px;
   h5 {
     font-size: 16px;
@@ -91,5 +95,51 @@ body {
   height: 1500px;
   margin-right: 0px;
   padding: 20px;
+  
+  .post {
+    background: $dark-main-color;
+    border-radius: 25px;
+    padding: 30px;
+    margin: 20px;
+    padding-bottom: 30px;
+    padding-top: 5px;
+  }
+
+  .post-meta {
+  
+    // background: green;
+    // right: 0;
+    text-align: right;
+    margin-top: 30px;
+
+    .post-tag {
+      padding: 2px 5px;
+      // background: $light-main-color;
+      border-radius: 5px;
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  span {
+    // background: blue;
+    margin-top: 30px;
+    // display:inline-block;
+
+    i {
+      padding-right: 5px;
+    }
+  }
+  span:not(:last-child) {
+    margin-right: 20px;
+  }
+/*   .header {
+    background: blue;
+    right: 10px;
+    left: 10px;
+    top: 10px;
+    margin: 30px;
+  } */
 
 }
