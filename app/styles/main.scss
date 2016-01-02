@@ -162,25 +162,25 @@ body {
     height: 100%;
     display: block;
     font-size: 64px;
-    color: $light-main-color;
+    // color: $light-main-color;
     &.about-headline {
       background-color: LimeGreen;
-      color: $gray;
+      color: $gray-light;
     }
 
     &.blog-headline {
       background-color: DodgerBlue;
-      color: $gray;
+      color: $gray-light;
     }
 
     &.contact-headline {
       background-color: GoldenRod;
-      color: $gray;
+      color: $gray-light;
     }
 
   }
   a:hover {
-    background: FloralWhite;
+    background: $light-main-color;
   }
   //     }
   // background: green;
