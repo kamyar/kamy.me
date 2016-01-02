@@ -2,6 +2,8 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
+
+
 // $dark-main-color: $gray-light;
 // $light-main-color: $brand-success;
 $dark-main-color: MediumSeaGreen ;
@@ -166,22 +168,22 @@ body {
 
   li.about-headline {
     a {
-      background-color: LimeGreen;
-      color: $gray;
+      background-color: Teal;
+      color: $light-main-color;
     }
     :hover {
-      background: $light-main-color;
+      background: $gray-light;
     }
     
   }
 
   li.blog-headline {
     a {
-      background-color: DodgerBlue;
-      color: $gray;
+      background-color: SlateBlue;
+      color: $light-main-color;
     }
     :hover {
-      background: $light-main-color;
+      background: $gray-light;
     }
   }
 
@@ -189,17 +191,17 @@ body {
     display: flex;
     a {
       flex-grow: 3;
-      background-color: GoldenRod;
-      color: $gray;
+      background-color: DarkOrange ;
+      color: $light-main-color;
     }
     :last-child {
       flex-grow: 2;
-      background-color: DarkOrchid;
-      color: $gray;
+      background-color: DarkCyan ;
+      color: $light-main-color;
 
     }
     :hover {
-      background: $light-main-color;
+      background: $gray-light;
     }
   }
 
