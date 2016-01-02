@@ -136,7 +136,6 @@ body {
 // bburasi
 /* Landing page style */
 .main {
-  
   width: 100%;
   height: 100vh;
   ul {
@@ -144,44 +143,67 @@ body {
     margin: 0px;
     list-style-type: none;
     padding: 0px;
-
   }
   li {
     height: 33.333%;
     text-align: center;
+    a:before {
+      content:'';
+      height:100%;
+      display:inline-block;
+      vertical-align: middle;
+    }
+    a {
+      // background: purple;
+      text-decoration: none !important;
+      height: 100%;
+      display: block;
+      font-size: 54px;
+      // color: $light-main-color;
+    }
+    
   }
-  a:before {
-    content:'';
-    height:100%;
-    display:inline-block;
-    vertical-align: middle;
-  }
-  a {
-    // background: purple;
-    text-decoration: none !important;
-    height: 100%;
-    display: block;
-    font-size: 64px;
-    // color: $light-main-color;
-    &.about-headline {
+
+  li.about-headline {
+    a {
       background-color: LimeGreen;
-      color: $gray-light;
+      color: $gray;
     }
+    :hover {
+      background: $light-main-color;
+    }
+    
+  }
 
-    &.blog-headline {
+  li.blog-headline {
+    a {
       background-color: DodgerBlue;
-      color: $gray-light;
+      color: $gray;
     }
+    :hover {
+      background: $light-main-color;
+    }
+  }
 
-    &.contact-headline {
+  li.contact-headline {
+    display: flex;
+    a {
+      flex-grow: 3;
       background-color: GoldenRod;
-      color: $gray-light;
+      color: $gray;
     }
+    :last-child {
+      flex-grow: 2;
+      background-color: DarkOrchid;
+      color: $gray;
 
+    }
+    :hover {
+      background: $light-main-color;
+    }
   }
-  a:hover {
-    background: $light-main-color;
-  }
+
+
   //     }
   // background: green;
   // ul {
