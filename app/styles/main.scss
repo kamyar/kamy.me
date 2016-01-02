@@ -1,7 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-
+@import "../plugins/hover/hover.scss";
 
 
 // $dark-main-color: $gray-light;
@@ -135,7 +135,6 @@ body {
 
 }
 
-// bburasi
 /* Landing page style */
 .main {
   width: 100%;
@@ -150,135 +149,52 @@ body {
     height: 33.333%;
     text-align: center;
     a:before {
+      background: LightSlateGray ;
+    }
+    a:after {
       content:'';
       height:100%;
       display:inline-block;
       vertical-align: middle;
     }
     a {
-      // background: purple;
       text-decoration: none !important;
       height: 100%;
       display: block;
-      font-size: 54px;
-      // color: $light-main-color;
+      font-size: 44px;
     }
     
   }
+  *, :hover * {
+    color: LightSteelBlue;
 
-  li.about-headline {
-    a {
-      background-color: Teal;
-      color: $light-main-color;
-    }
-    :hover {
-      background: $gray-light;
-    }
-    
   }
 
-  li.blog-headline {
-    a {
-      background-color: SlateBlue;
-      color: $light-main-color;
-    }
-    :hover {
-      background: $gray-light;
-    }
+  .about-headline {
+    background-color: Teal;
   }
 
-  li.contact-headline {
+  .blog-headline {
+    background-color: SlateBlue;
+  }
+  
+  .contact-section {
+    background-color: DarkOrange ;
+  }
+  
+  .cv-section {
+    background-color: DarkSlateGray  ;
+  }
+
+  li.two-section {
     display: flex;
     a {
       flex-grow: 3;
-      background-color: DarkOrange ;
-      color: $light-main-color;
     }
     :last-child {
       flex-grow: 2;
-      background-color: DarkCyan ;
-      color: $light-main-color;
-
-    }
-    :hover {
-      background: $gray-light;
     }
   }
-
-
-  //     }
-  // background: green;
-  // ul {
-  //   text-align: center;
-  //   width: 100%;
-  //   height: 100%;
-  //   display: flex;
-  //   flex-direction: column;
-  //   padding: 0;
-    
-
-  //   li {
-  //     // width: 100%;
-  //     display: block;
-  //     flex-grow: 1;
-  //     // text-align: center;
-  //     padding: 0;
-  //     a {
-  //       background: purple;
-  //       // height: 100%;
-  //       display: block;
-  //       // padding: 1em;
-  //       // display: block;
-
-  //     }
-  //   }
-
-  //   .about-headline {
-  //     background: orange;
-  //   }
-
-  //   .blog-headline {
-  //     background: red;
-  //   }
-
-  //   .contact-headline {
-  //     background: blue;
-  //   }
-  // }
-
-    /*  Asagisi calisan ama align olmayan*/
- /*  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-
-  }
-  
-  li {
-      display: flex;
-      flex-grow: 1;
-      background: blue;
-      text-align: center;
-
-  }
-  a {
-      flex-grow: 1;
-      background: green;;
-      color: #fff;
-      // display: block;
-      // padding: 100px;
-      // height: auto;
-      vertical-align: middle;
-      // margin: 50%;
-  }
-
-  li a:hover {
-    background: #555;
-  } */
 
 }
 
