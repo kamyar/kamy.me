@@ -5,13 +5,13 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 // $dark-main-color: $gray-light;
 // $light-main-color: $brand-success;
 $dark-main-color: MediumSeaGreen ;
-// $light-main-color: LightGray;
-// .infobar-wrapper {
-//   * {
-//     color: dimGrey;
-//   }
-// }
-$light-main-color: SlateGray;
+$light-main-color: LightGray;
+.infobar-wrapper {
+  * {
+    color: dimGrey;
+  }
+}
+// $light-main-color: SlateGray;
 
 body {
   // height: auto;
@@ -139,6 +139,51 @@ body {
   
   width: 100%;
   height: 100vh;
+  ul {
+    height: 100%;
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
+
+  }
+  li {
+    height: 33.333%;
+    text-align: center;
+  }
+  a:before {
+    content:'';
+    height:100%;
+    display:inline-block;
+    vertical-align: middle;
+  }
+  a {
+    // background: purple;
+    text-decoration: none !important;
+    height: 100%;
+    display: block;
+    font-size: 64px;
+    color: $light-main-color;
+    &.about-headline {
+      background-color: LimeGreen;
+      color: $gray;
+    }
+
+    &.blog-headline {
+      background-color: DodgerBlue;
+      color: $gray;
+    }
+
+    &.contact-headline {
+      background-color: GoldenRod;
+      color: $gray;
+    }
+
+  }
+  a:hover {
+    background: FloralWhite;
+  }
+  //     }
+  // background: green;
   // ul {
   //   text-align: center;
   //   width: 100%;
@@ -177,7 +222,8 @@ body {
   //   }
   // }
 
-  ul {
+    /*  Asagisi calisan ama align olmayan*/
+ /*  ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -193,20 +239,22 @@ body {
       flex-grow: 1;
       background: blue;
       text-align: center;
+
   }
-  li a {
+  a {
       flex-grow: 1;
       background: green;;
       color: #fff;
-      display: block;
+      // display: block;
       // padding: 100px;
-      height: auto;
+      // height: auto;
+      vertical-align: middle;
       // margin: 50%;
   }
 
   li a:hover {
     background: #555;
-  }
+  } */
 
 }
 
