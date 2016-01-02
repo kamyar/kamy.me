@@ -6,9 +6,16 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 // $light-main-color: $brand-success;
 $dark-main-color: MediumSeaGreen ;
 // $light-main-color: LightGray;
+// .infobar-wrapper {
+//   * {
+//     color: dimGrey;
+//   }
+// }
 $light-main-color: SlateGray;
 
 body {
+  // height: auto;
+  min-height: 100vh;
   * {
     color: $gray-lighter;
   }
@@ -20,26 +27,34 @@ body {
 
 .infobar-wrapper {
   @extend .col-md-4;
-  @extend .clearfix;
+  // @extend .clearfix;
 
-  // * {
-  //   color: dimGrey;
-  // }
+  .infobar {
+    background: $light-main-color;
+    border-radius: 25px;
+    padding: 30px;
+    height: 100%;
+    position: relative;
+
+  }  
+
+
+
   background: $dark-main-color;
   height: 100%;
   position: fixed;
-  padding: 10px;
+  padding: 30px;
 
   @media screen and (max-width: 991px) {
       position: relative;
   }
 
   ul.social {
-    padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    height: auto;
     width:100%;
-    height:20px;
     text-align:center;
+    display:block;
   }
 
   ul.social li {
@@ -56,7 +71,6 @@ body {
   }      
 
   h1 {
-    // color: $gray-lighter;
     text-align: center;
   }
 
@@ -67,11 +81,18 @@ body {
     text-indent: 10px;
     text-align: center;
   }
-
   .footer {
-    bottom: 0;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    text-align: center;
   }
+
 }
+
+
+
 
 .about-section {
   margin: 10px;
@@ -87,13 +108,115 @@ body {
   }
 }
 
-.main {
-  @extend .col-md-8;
-  @extend .pull-right;
-  position: static;
+.right-section {
+  @extend .col-md-8, .col-md-offset-4;
+  @media screen and (min-width: 991px) {
+    // @extend .pull-right;
+  }
+    @media screen and (max-width: 991px) {
+    // width: 100%;
+  }
+  @extend .col-sm-12;
+  @extend .col-sx-12;
+  // position: static;
+  // margin-right: 0px;
+  min-height: 100vh;
+  padding: 0;
   background: $light-main-color;
-  height: 1500px;
-  margin-right: 0px;
+}
+
+
+/* Contact page style */
+.contact {
+  // @extend %right-section;
+
+
+}
+
+// bburasi
+/* Landing page style */
+.main {
+  
+  width: 100%;
+  height: 100vh;
+  // ul {
+  //   text-align: center;
+  //   width: 100%;
+  //   height: 100%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   padding: 0;
+    
+
+  //   li {
+  //     // width: 100%;
+  //     display: block;
+  //     flex-grow: 1;
+  //     // text-align: center;
+  //     padding: 0;
+  //     a {
+  //       background: purple;
+  //       // height: 100%;
+  //       display: block;
+  //       // padding: 1em;
+  //       // display: block;
+
+  //     }
+  //   }
+
+  //   .about-headline {
+  //     background: orange;
+  //   }
+
+  //   .blog-headline {
+  //     background: red;
+  //   }
+
+  //   .contact-headline {
+  //     background: blue;
+  //   }
+  // }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+  }
+  
+  li {
+      display: flex;
+      flex-grow: 1;
+      background: blue;
+      text-align: center;
+  }
+  li a {
+      flex-grow: 1;
+      background: green;;
+      color: #fff;
+      display: block;
+      // padding: 100px;
+      height: auto;
+      // margin: 50%;
+  }
+
+  li a:hover {
+    background: #555;
+  }
+
+}
+
+
+/* Blog style */
+.blog {
+  // @extend %right-section;
+  // height: 100vh;
+  // min-height: 100%;
+  bottom: 0px;
   padding: 20px;
   
   .post {
@@ -107,9 +230,7 @@ body {
 
   .post-meta {
   
-    // background: green;
-    // right: 0;
-    text-align: right;
+    // text-align: right;
     margin-top: 30px;
 
     .post-tag {
@@ -123,12 +244,11 @@ body {
   }
 
   span {
-    // background: blue;
     margin-top: 30px;
-    // display:inline-block;
 
     i {
       padding-right: 5px;
+      padding-left: 15px;
     }
   }
   span:not(:last-child) {
