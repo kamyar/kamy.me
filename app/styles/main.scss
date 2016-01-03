@@ -95,21 +95,6 @@ body {
 
 
 
-
-.about-section {
-  margin: 10px;
-  padding: 10px;
-  text-align: right;
-  background: $light-main-color;
-  border-radius: 25px;
-  h5 {
-    font-size: 16px;
-    li {
-      text-align: left;
-    }
-  }
-}
-
 .right-section {
   @extend .col-md-8, .col-md-offset-4;
   @media screen and (min-width: 991px) {
@@ -125,14 +110,6 @@ body {
   min-height: 100vh;
   padding: 0;
   background: $light-main-color;
-}
-
-
-/* Contact page style */
-.contact {
-  // @extend %right-section;
-
-
 }
 
 /* Landing page style */
@@ -183,7 +160,7 @@ body {
   }
   
   .cv-section {
-    background-color: DarkSlateGray  ;
+    background-color: DodgerBlue;
   }
 
   li.two-section {
@@ -212,6 +189,44 @@ body {
   }
 }
 
+.about-section {
+  @extend .contents-wrapper;
+  margin: 10px;
+  padding: 10px;
+  // text-align: right;
+  // background: yellow;
+  border-radius: 25px;
+  // position: absolute;
+  height: 100%;
+  // display: flex;
+
+  h5 {
+    font-size: 16px;
+    li {
+      text-align: left;
+    }
+  }
+
+  .twoColumnList {
+    padding: 15px;
+    text-align: left;
+    font-size: 20px;
+    li {
+      display: inline-block;
+      width: 49%;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+    }
+  }
+  a.fa::before {
+    margin-right: 5px;
+  }
+
+
+}
+
+/* Contact page style */
 .contact {
   @extend .contents-wrapper;
   .contact-form {
