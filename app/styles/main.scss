@@ -8,6 +8,16 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 // $light-main-color: $brand-success;
 $dark-main-color: MediumSeaGreen ;
 $light-main-color: LightGray;
+
+
+.hidden {
+    visibility: hidden;
+    over-flow: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+
 .infobar-wrapper {
   * {
     color: dimGrey;
@@ -107,9 +117,19 @@ body {
   @extend .col-sx-12;
   // position: static;
   // margin-right: 0px;
+  .back-button {
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    a {
+      color: $dark-main-color;
+      text-decoration:none;
+    }
+  }
   min-height: 100vh;
   padding: 0;
   background: $light-main-color;
+  overflow: hidden;
 }
 
 /* Landing page style */
@@ -232,9 +252,7 @@ body {
   .contact-form {
     padding: 30px;
   }
-  // * {
-  //   color: $light-main-color;
-  // }
+
   .form-control::-webkit-input-placeholder { color: dimGray; }
   .form-control:-moz-placeholder { color: dimGray; }
   .form-control::-moz-placeholder { color: dimGray; }
@@ -243,9 +261,6 @@ body {
   .custom-button {
     color: dimGray;
     border-radius: 12px;
-
-    // border: 3px solid dimGray;
-
   }
 
   input, textarea{
