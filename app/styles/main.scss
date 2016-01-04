@@ -12,22 +12,17 @@ $light-main-color: LightGray;
 
 .hidden {
     visibility: hidden;
-    over-flow: hidden;
+    overflow: hidden;
     width: 0px;
     height: 0px;
 }
 
-
-.infobar-wrapper {
-  * {
-    color: dimGrey;
-  }
-}
 // $light-main-color: SlateGray;
 
 body {
   // height: auto;
   min-height: 100vh;
+  width: 100vw;
   * {
     color: $gray-lighter;
   }
@@ -35,11 +30,17 @@ body {
   a {
     color: $gray-dark;
   }
+  background: $dark-main-color;
+  overflow-x: hidden;
 }
 
 .infobar-wrapper {
-  @extend .col-md-4;
+  @extend .col-md-4, .col-md-offset-0;
   // @extend .clearfix;
+
+  * {
+    color: dimGrey;
+  }
 
   .infobar {
     background: $light-main-color;
@@ -48,12 +49,26 @@ body {
     height: 100%;
     position: relative;
 
-  }  
 
+  }
+  @media screen and (min-width: 991px) {
+    .infobar {
+      padding: 0px;
+      margin-bottom: 50px;
+      padding: 30px;
+      // margin: 2%;
+      margin-right: 71%;
+      margin-left: 0.5%;
+    }
+    padding-bottom: 5%;
+    // z-index: -1;
+    width: 100vw;
+  }
 
 
   background: $dark-main-color;
   height: 100%;
+  // height: 100vh;
   position: fixed;
   padding: 30px;
 
@@ -107,12 +122,8 @@ body {
 
 .right-section {
   @extend .col-md-8, .col-md-offset-4;
-  @media screen and (min-width: 991px) {
-    // @extend .pull-right;
-  }
-    @media screen and (max-width: 991px) {
-    // width: 100%;
-  }
+
+
   @extend .col-sm-12;
   @extend .col-sx-12;
   // position: static;
