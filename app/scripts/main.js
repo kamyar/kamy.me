@@ -20,6 +20,7 @@ $(function() {
         '#about': ".about-section",
         '#blog': ".blog",
         '#contact': ".contact",
+        '#CV': ".cv-page",
         '#menu': ".main",
     };
 
@@ -62,6 +63,17 @@ $(function() {
     $(window).on('hashchange', transitionHandler);
 
     transitionHandler();
+    $("#contact-form-submit").click(function(event) {
+      event.preventDefault();
+      r = confirm("Under Construction...:(\nCheck Back later ^_^");
+      if (r == true) {
+          alert("Good Boy!");
+      } else {
+          // alert("Do I look liek I care?");
+          alert("I am sorry!");
+          window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      }
+    });
     // $("#aboutPage").click(function(event) {
     //   event.preventDefault()
     //   $('#mainPage').css('z-index', -1000);
