@@ -24,3 +24,6 @@ app/*.html
 app/*/*.html
 app/partials/*/*.html
 Prepros\ Build/*
+
+#build dir
+final/
