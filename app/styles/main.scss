@@ -82,18 +82,22 @@ body {
     width:100%;
     text-align:center;
     display:block;
+    -webkit-padding-start: 0px !important;
   }
 
   ul.social li {
     display: table-cell;
     display:inline-block;
-    margin-right:10px;
     &:hover {
       a {
         transition: 1.5s;
         transform: rotateZ(360deg);
       }
 
+    }
+
+    &:not(:last-child) {
+      margin-right:10px;
     }
   }      
 
