@@ -130,7 +130,7 @@ body {
   // margin-right: 0px;
   .back-button {
     padding: 10px;
-    position: absolute;
+    position: fixed;
     z-index: 10;
     a {
       color: $dark-main-color;
