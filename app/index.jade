@@ -4,9 +4,15 @@ html(lang='en')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='description', content="Kamyar Ghasemlou's Personal Webpage")
+    meta(name='description', content="Thinker / Pythonist / Polyglot")
     meta(name="keywords", content="Kamyar Ghasemlou, METU, CENG, kamy, kamy.me")
-    meta(name='Kamyar Ghasemlou', content='Kamyar Ghasemlou')
+    meta(name='Kamy.me - Kamyar Ghasemlou', content='Kamyar Ghasemlou')
+    meta(property='og:url', content='http://kamy.me/')
+    meta(property='og:type', content='website')
+    meta(property='og:title', content='Kamy.me - Kamyar Ghasemlou')
+    meta(property='og:description', content='Thinker / Pythonist / Polyglot')
+    meta(property='og:image', content='http://kamy.me/images/og_image.png')
+
     title Kamyar Ghasemlou
 
     // Custom CSS
@@ -18,6 +24,7 @@ html(lang='en')
     link(href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
   body
+    script(src='scripts/analytics.js')
     include ./partials/sidebar/index.jade
     .container-fluid
       .row
