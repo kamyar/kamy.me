@@ -2,6 +2,15 @@
 // $('.main').addClass('fadeInRight');
 // });
 
+String.prototype.format = function() {
+    var formatted = this;
+    for (var i = 0; i < arguments.length; i++) {
+        var regexp = new RegExp('\\{'+i+'\\}', 'gi');
+        formatted = formatted.replace(regexp, arguments[i]);
+    }
+    return formatted;
+};
+
 function animateAndSterilize(target, animation, callback) {
     target.addClass(animation).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
         target.removeClass(animation);
@@ -15,6 +24,9 @@ function animateAndSterilize(target, animation, callback) {
 
 $(function() {
     $('.fa').tooltip();
+    //
+    var currYear = new Date().getFullYear();
+    $('#footer-txt').text("Copyright &copy; 2010 - {0} Kamyar Ghasemlou".format(currYear));
 
     pages = {
         '#about': ".about-section",
@@ -30,10 +42,7 @@ $(function() {
     var transitionHandler = function(e) {
       currHash = window.location.hash;
       if(!currHash) return;
-      // if(currHash = "#menu"){
 
-      // }
-      // console.log(pages[currHash]);
       if(currHash != "#menu"){
         $(".back-button").removeClass("hidden");
         animateAndSterilize($(".back-button"), 'animated slideInDown')
@@ -47,17 +56,9 @@ $(function() {
         $(pages[stateInfo.lastState]).addClass('hidden');
         $(pages[currHash]).removeClass("hidden");
 
-        animateAndSterilize($(pages[currHash]), 'animated slideInRight'); 
+        animateAndSterilize($(pages[currHash]), 'animated slideInRight');
         stateInfo.lastState = currHash;
       });
-      // $(pages[stateInfo.lastState]).addClass('animated slideOutLeft')
-      //     .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-      //         $(pages[stateInfo.lastState]).addClass('hidden');
-      //         $(pages[currHash]).removeClass("hidden");
-      //         $(pages[currHash]).addClass('animated slideInRight');
-      //       });
-      
-      // window.location.hash = '';
     }
 
     $(window).on('hashchange', transitionHandler);
@@ -74,24 +75,5 @@ $(function() {
           window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
       }
     });
-    // $("#aboutPage").click(function(event) {
-    //   event.preventDefault()
-    //   $('#mainPage').css('z-index', -1000);
-    //   $('#mainPage').addClass('animated slideOutDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-    //     $('#mainPage').addClass('hidden');
-    //     $('.about-section').removeClass('hidden');
-    //     $('.about-section').addClass('animated slideInRight')
-        
-    //   });
-    // });
-    // $("#blogPage").click(function() {
-    //   alert("blog");
-    // });
-    // $("#contactPage").click(function() {
-    //   alert("contact");
-    // });
-    // $("#cvPage").click(function() {
-    //   alert("cv");
-    // });
 
 });
