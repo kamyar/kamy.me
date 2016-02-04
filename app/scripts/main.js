@@ -26,7 +26,7 @@ $(function() {
     $('.fa').tooltip();
     //
     var currYear = new Date().getFullYear();
-    $('#footer-txt').append("<p>Copyright &copy; 2010 - {0} Kamyar Ghasemlou</p>".format(currYear));
+    $('#footer-txt').prepend("Copyright &copy; {0} - ".format(currYear));
 
     pages = {
         '#about': ".about-section",
